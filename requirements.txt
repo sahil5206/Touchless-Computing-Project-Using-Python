@@ -1,0 +1,9 @@
+mediapipe
+cv2
+time
+pyautogui
+numpy
+math
+comtypes
+HandTrackingModule
+pycaw
