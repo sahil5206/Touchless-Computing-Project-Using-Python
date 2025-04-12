@@ -7,3 +7,8 @@ math
 comtypes
 HandTrackingModule
 pycaw
+pyttsx3
+webbrowser
+os
+difflib
+speech_recognition
