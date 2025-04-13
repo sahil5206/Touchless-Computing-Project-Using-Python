@@ -80,7 +80,10 @@ rows = [
     "1234567890",
     "qwertyuiop",
     "asdfghjkl",
-    "zxcvbnm"
+    "zxcvbnm",
+    "",
+
+    "!@#$%^&*()"
 ]
 
 keys = []
@@ -91,11 +94,11 @@ for i, row in enumerate(rows):
         x = startX + (w + 5) * j
         y = startY + (h + 5) * i
         special_characters = None
-        if i == 0 and j < 10:
-            special_characters = "!@#$%^&*()"[j]
+        '''if i == 0 and j < 10:
+            special_characters = "!@#$%^&*()"[j]'''
         keys.append(Key(x, y, w, h, char, special_characters))
 
-keys.append(Key(startX + 9 * w + 10, startY + 3 * h + 10, w, h, "Caps"))
+#keys.append(Key(startX + 9 * w + 10, startY + 3 * h + 10, w, h, "Caps"))
 keys.append(Key(startX + -1 * w + 15, startY + 4 * h + 10, 2 * w, h, "Win"))
 keys.append(Key(startX+130, startY+4*h+15, 4*w, h, "Space"))
 keys.append(Key(startX+10*w + 50, startY+2*h+10, w, h, "clr"))
@@ -187,8 +190,8 @@ while cap.isOpened():
     textBox.drawKey(image)
 
     # Draw Caps Lock status
-    caps_status = "ON" if caps_lock_on else "OFF"
-    cv2.putText(image, f"Caps Lock: {caps_status}", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+    #caps_status = "ON" if caps_lock_on else "OFF"
+    #cv2.putText(image, f"Caps Lock: {caps_status}", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 
     # Flip the image horizontally for a selfie-view display.
     image = cv2.resize(image, (1920, 1080))
