@@ -1,4 +1,4 @@
-# Hand-Gestured-Virtual-Controllers
+#Touchless-Computing-Project-Using-Python
 This repository is made by Sahil Gupta and i provided my 4th semester B.Tech project as an open-source project so that any student in the future can use this repository to make this Touchless Computing Project using python.
 
 In this repository there are 5 python files but if anyone wants to run: 
