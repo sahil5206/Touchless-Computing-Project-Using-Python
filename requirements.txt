@@ -12,3 +12,5 @@ webbrowser
 os
 difflib
 speech_recognition
+customtkinter
+subprocess
