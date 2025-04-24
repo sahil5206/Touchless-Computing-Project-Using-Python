@@ -1,4 +1,3 @@
-
 import speech_recognition as sr
 import pyttsx3
 import pyautogui
@@ -7,7 +6,7 @@ import os
 import difflib
 import time
 
-# Text-to-Speech Engine
+# Initialize TTS engine
 engine = pyttsx3.init()
 engine.setProperty('rate', 180)
 
@@ -16,7 +15,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-# Command Mapping
+# Command Map
 COMMANDS = {
     "open notepad": lambda: os.system("notepad.exe"),
     "open browser": lambda: webbrowser.open("https://www.google.com"),
@@ -34,16 +33,20 @@ def recognize_command():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         speak("Listening...")
-        recognizer.adjust_for_ambient_noise(source)
-        audio = recognizer.listen(source)
+        recognizer.adjust_for_ambient_noise(source, duration=1)
         try:
+            audio = recognizer.listen(source, timeout=5, phrase_time_limit=7)
             text = recognizer.recognize_google(audio).lower()
             print("🧠 Recognized:", text)
             return text
+        except sr.WaitTimeoutError:
+            speak("I didn't hear anything. Try again.")
         except sr.UnknownValueError:
-            speak("Sorry, I didn’t catch that.")
-        except sr.RequestError:
-            speak("Network error.")
+            speak("Sorry, I didn’t understand that.")
+        except sr.RequestError as e:
+            speak(f"Could not request results; {e}")
+        except Exception as e:
+            speak(f"An error occurred: {e}")
     return ""
 
 def match_command(text):
@@ -60,7 +63,7 @@ def main():
         if not command:
             continue
 
-        if "type" in command:
+        if command.startswith("type"):
             to_type = command.replace("type", "").strip()
             pyautogui.write(to_type)
             speak(f"Typed: {to_type}")
@@ -70,8 +73,6 @@ def main():
         if matched:
             speak(f"Executing: {matched}")
             COMMANDS[matched]()
-            if matched == "screenshot":
-                speak("Screenshot saved.")
         else:
             speak("Sorry, I don’t recognize that command.")
 
