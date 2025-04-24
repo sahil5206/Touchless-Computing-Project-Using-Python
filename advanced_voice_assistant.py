@@ -11,7 +11,7 @@ engine = pyttsx3.init()
 engine.setProperty('rate', 180)
 
 def speak(text):
-    print("🗣️ Assistant:", text)
+    print("Assistant:", text)
     engine.say(text)
     engine.runAndWait()
 
@@ -37,12 +37,12 @@ def recognize_command():
         try:
             audio = recognizer.listen(source, timeout=5, phrase_time_limit=7)
             text = recognizer.recognize_google(audio).lower()
-            print("🧠 Recognized:", text)
+            print("Recognized:", text)
             return text
         except sr.WaitTimeoutError:
-            speak("I didn't hear anything. Try again.")
+            speak("I did not hear anything. Try again.")
         except sr.UnknownValueError:
-            speak("Sorry, I didn’t understand that.")
+            speak("Sorry, I did not understand that.")
         except sr.RequestError as e:
             speak(f"Could not request results; {e}")
         except Exception as e:
@@ -74,7 +74,7 @@ def main():
             speak(f"Executing: {matched}")
             COMMANDS[matched]()
         else:
-            speak("Sorry, I don’t recognize that command.")
+            speak("Sorry, I do not recognize that command.")
 
 if __name__ == "__main__":
     main()
