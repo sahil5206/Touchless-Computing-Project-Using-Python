@@ -14,7 +14,7 @@ In this repository there are 7 python files but if anyone wants to run:
 
 NOTE: the "HandTrackingModule.py" is essential for running the "Gesture_Volume_Control.py" and the same code is also written in "virtualkeyboard.py"(starting from the 211th line) so there is no need to download it specially for the "virtualkeyboard.py"
 
-If your are facing any problem or error in this project, you can contact me through my profile.
+🛠️🛠 If your are facing any problem or error in this project, you can contact me through my profile.
 
 Don't Compete...Let's Collaborate...🔥	🔥	🔥	
 
