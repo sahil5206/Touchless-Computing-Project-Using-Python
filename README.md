@@ -24,6 +24,6 @@ In this repository there are 7 python files but if anyone wants to run:
 
 🛠️🛠 If your are facing any problem or error in this project, you can contact me through my profile.
 
-Don't Compete...Let's Collaborate...🔥	🔥	🔥	
+Don't Compete...Let's Collaborate...🤝🤝	
 
 BE HAPPY AND STAY POSITIVE...😀😀😀
