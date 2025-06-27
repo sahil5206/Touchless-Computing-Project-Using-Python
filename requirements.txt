@@ -1,3 +1,4 @@
+# Download these using 'pip'
 mediapipe
 cv2
 time
