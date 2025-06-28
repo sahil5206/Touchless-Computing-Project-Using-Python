@@ -2,7 +2,7 @@
 
 *Use python 3.12.8*
 
-This repository is made by Sahil Gupta and i provided my 4th semester B.Tech project as an open-source project so that any student in the future can use this repository to make this Touchless Computing Project using python.
+This repository is made by Sahil Gupta and i provided my 4th semester B.Tech project as an open-source project, so that any student in the future can use this repository to make this Touchless Computing Project using python.
 
 In this repository there are 7 python files but if anyone wants to run: 
 
