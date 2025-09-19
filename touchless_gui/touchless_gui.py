@@ -37,12 +37,13 @@ title_label.pack(pady=30)
 
 # Buttons
 buttons = [
-    ("🖐️ Hand Gesture Keyboard", "virtualkeyboard.py"),
-    ("🖱️ Hand Gesture Mouse", "mouse.py"),
-    ("👁️ Eye Gesture Mouse", "eye_controlled_mouse.py"),
-    ("🔊 Volume Controller", "Gesture_Volume_Control.py"),
-    ("🎙️ Voice Assistant", "advanced_voice_assistant.py"),
+    ("🖐️ Hand Gesture Keyboard", "../virtual_keyboard/virtualkeyboard.py"),
+    ("🖱️ Hand Gesture Mouse", "../virtual_mouse/mouse.py"),
+    ("👁️ Eye Gesture Mouse", "../eye_controlled_mouse/eye_controlled_mouse.py"),
+    ("🔊 Volume Controller", "../guesture_volume_control/Gesture_Volume_Control.py"),
+    ("🎙️ Voice Assistant", "../advanced_voice_assistant/advanced_voice_assistant.py"),
 ]
+
 
 for label, script in buttons:
     btn = ctk.CTkButton(app, text=label, command=lambda s=script: run_script(s), width=300, height=50, corner_radius=10, font=ctk.CTkFont(size=16))
