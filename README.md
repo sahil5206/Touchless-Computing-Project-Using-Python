@@ -1,5 +1,7 @@
 # Touchless-Computing-Project-Using-Python. 🚀🚀🚀
 
+**This project can only work on windows pc/laptop**
+
 *Use python 3.12.8*
 
 This repository is made by Sahil Gupta and i provided my 4th semester B.Tech project as an open-source project, so that any student in the future can use this repository to make this Touchless Computing Project using python.
